@@ -7,8 +7,7 @@ import Alert from "./Compnents/Alert";
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -57,8 +56,7 @@ function App() {
           <Routes>
             <Route exact path="/about" element={<About/>}/>
             <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter your text to Analyse" mode={mode}/>}/>
-          </Routes>   
-          
+          </Routes> 
         </div>
       </Router>
       {/* <TextForm showAlert={showAlert} heading="Enter your text to Analyse" mode={mode}/> */}
