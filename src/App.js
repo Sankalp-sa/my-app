@@ -1,14 +1,14 @@
 import "./App.css";
 import Navbar from "./Compnents/Navbar";
 import TextForm from "./Compnents/TextForm";
-// import About from './Compnents/About'
+import About from './Compnents/About'
 import React,{useState} from "react";
 import Alert from "./Compnents/Alert";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
 
@@ -47,19 +47,19 @@ function App() {
   return (
     <>
       {/* <Navbar /> */}
-        {/* <Navbar title="TextUtiles" aboutText="About Us" mode={mode} enable={enable} toggle={toggle}/>
-        <Alert alert={alert} mode={mode}/> */}
-      {/* <Router> */}
-      <Navbar title="TextUtiles" aboutText="About Us" mode={mode} enable={enable} toggle={toggle}/>
-      <Alert alert={alert} mode={mode}/>
-      <div className="container my-3">
-          {/* <Routes> */}
-            {/* <Route exact path="/about" element={<About/>}/> */}
-            {/* <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter your text to Analyse" mode={mode}/>}/> */}
-          {/* </Routes>  */}
-        <TextForm showAlert={showAlert} heading="Enter your text to Analyse" mode={mode}/>
-      </div>
-      {/* </Router> */}
+      {/* <Navbar title="TextUtiles" aboutText="About Us" mode={mode} enable={enable} toggle={toggle}/>
+      <Alert alert={alert} mode={mode}/> */}
+      <Router>
+        <Navbar title="TextUtiles" aboutText="About Us" mode={mode} enable={enable} toggle={toggle}/>
+        <Alert alert={alert} mode={mode}/>
+        <div className="container my-3">
+            <Routes>
+              <Route exact path="/about" element={<About/>}/>
+              <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter your text to Analyse" mode={mode}/>}/>
+            </Routes> 
+          {/* <TextForm showAlert={showAlert} heading="Enter your text to Analyse" mode={mode}/> */}
+        </div>
+      </Router>
 
     </>
   );
